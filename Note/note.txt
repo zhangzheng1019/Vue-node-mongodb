@@ -1,0 +1,77 @@
+前导课程：
+express框架：接口服务
+    what: 对nodejs封装，快速对构建服务端web应用
+MongoDB：进行数据存储
+
+VueJs概况：
+
+    · Vue本身不是一个框架
+    · Vue结合周边生态构成了一个灵活的、渐进式的框架
+    · 声明式渲染(Render)->组件系统(Component)->客户端路由(Router)->大规模状态管理(State)->构建工具(Build)
+VueJs核心思想：
+
+    · 数据驱动(更关注 数据层面)
+    · 组件化
+    · 如何实现双向数据绑定(见demo1.html)：Object.defineProperty();
+
+Vue和React:
+不同点：
+
+    Vue
+    · Vue 模板和渲染函数的弹性选择
+    · 简单的语法及项目创建
+    · 更快渲染速度和更小的体积
+
+    React:
+    · 更实用大型应用和更好的可测试性
+    · 同时使用与Web端和原生App
+    · 更大的生态圈代买的更多的支持和工具
+
+相同点：
+
+    · 利用虚拟DOM实现快速渲染
+    · 轻量级
+    · 响应式组件
+    · 服务端渲染(ssr)
+    · 易于集成路由工具、打包工具以及状态管理工具
+    · 优秀的支持和社区
+
+
+文件目录详解：
+初始化：
+vue init webpack ImoocMall 
+
+ESlint（代码检查，建议不安装）
+unit tests（单元测试，建议不安装）
+e2e tests（集成测试，建议不安装）
+
+build: 打包文件
+    build.js: 构建生成版本
+config: 打包配置文件
+.babelrc: es6配置，不然没有办法解析es6
+.editorconfig: 编辑器的配置
+.gitignore: 忽略git提交的配置 
+.postcssrc.js: 
+index.html 
+package.json 
+README.md
+
+插件：
+chalk： 设置对日志输出进行操作，比如设置字体颜色等
+semver: 版本检查工具（vaild：校验；clean：清除左右空格；lt；gt;）
+process.env.NODE_ENV: 全局配置
+需要修改的index.js
+build.js文件
+webpack：打包插件
+（index.js可以省略）
+assetsPublicPath
+
+webpack.prod.conf.js: 生产环境中的配置；
+webpack-merge: 继承配置
+
+
+package.json
+    · script : dev（看项目配置文件，不一定是dev）
+    ·  
+    · 
+    · 
