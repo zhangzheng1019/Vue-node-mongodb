@@ -41,24 +41,42 @@ Vue和React:
 初始化：
 vue init webpack ImoocMall 
 
-ESlint（代码检查，建议不安装）
+ESlint（代码检查，建议不安装，coding过程不顺利）
 unit tests（单元测试，建议不安装）
 e2e tests（集成测试，建议不安装）
 
 build: 打包文件
-    build.js: 构建生成版本
+
+    build.js: 构建生成版本,
+    check-versions.js: 版本检查
+        插件：
+        chalk： 设置对日志输出进行操作，比如设置字体颜色等
+        semver: 版本检查工具（vaild：校验；clean：清除左右空格；lt；gt;）
+    dev-client.js: 热重载插件
+    dev-server.js: 在开发下的服务器（为啥会启动localhost）
+    utils.js: 工具的输出
+    vue-loader.js: 
+    webpack.base.conf.js: 
+    webpack.dev.conf.js: 
+    webpack.prod.conf.js: 
+
+
 config: 打包配置文件
+
+    dev.env.js:
+    index.js: 核心关注
+    prod.env.js: 
+
 .babelrc: es6配置，不然没有办法解析es6
 .editorconfig: 编辑器的配置
 .gitignore: 忽略git提交的配置 
-.postcssrc.js: 
-index.html 
-package.json 
-README.md
+.postcssrc.js: html添加前缀的配置
+index.html : 入口
+package.json : 
+README.md :
 
 插件：
-chalk： 设置对日志输出进行操作，比如设置字体颜色等
-semver: 版本检查工具（vaild：校验；clean：清除左右空格；lt；gt;）
+
 process.env.NODE_ENV: 全局配置
 需要修改的index.js
 build.js文件
@@ -75,3 +93,41 @@ package.json
     ·  
     · 
     · 
+
+
+Vue 基础语法介绍
+    
+    事件处理器
+        v-on:click.stop: 阻止冒泡
+        v-on:click.stop.prevent: 阻止模式事件（原效果）
+        v-on:click.self: 对象本身，对子元素没有作用
+        v-on:click.once: 一次
+        v-on:keyup.enter   等等。。。
+
+Vue组件
+
+        全局组件和局部组件
+        父子组件通讯-数据传递
+        Slot： 插槽
+
+Vue 路由：
+    
+    优点：用户体验好，不需要每次都从服务器全部获取，快速展现给用户
+    缺点：
+        不利于SEO
+        使用浏览器的前进，后退键的时候会重新发请求，没有合理地利用缓存
+        单页面无法记住之前滚动的位置，无法在前进、后退的时候记住滚动的位置
+    <router-link></router-link> OR this.$router.push({path:''});
+    <router-view></router-view>
+    
+
+Vue 路由分类（3-2节)：
+
+    动态路由匹配
+        /user/:username(/post/:post_id)
+    嵌套路由
+    编程式路由
+    命名路由和命名视图
+
+
+

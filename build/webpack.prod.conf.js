@@ -2,6 +2,7 @@ var path = require('path')
 var utils = require('./utils')
 var webpack = require('webpack')
 var config = require('../config')
+// 继承
 var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -18,6 +19,8 @@ var webpackConfig = merge(baseWebpackConfig, {
       extract: true
     })
   },
+  // 指定开发模式
+  // #source-map:源码
   devtool: config.build.productionSourceMap ? '#source-map' : false,
   output: {
     path: config.build.assetsRoot,
