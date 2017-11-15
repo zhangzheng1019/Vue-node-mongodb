@@ -125,9 +125,30 @@ Vue 路由分类（3-2节)：
 
     动态路由匹配
         /user/:username(/post/:post_id)
+        控制路由机制：使用的history
+        history.go(1)
+        history.go(-1)
+        history.pushState({})
     嵌套路由
+        <router-view></router-view>
+        <router-link></router-link>
     编程式路由
+        通过js实现页面的跳转
+        $router.push('name');
+        $router.push({path:"name"});
+        $router.push({path:"name?a=123"});
+        $router.push({path:"name",query:{a:121}});
+        $router.go(1);
+        注意：
+            定义路由：$router.push
+            获取路由参数：$route.query.
     命名路由和命名视图
+        给路由定义不同的名字，根据名字匹配
+        
+
+Vue GoodsList.vue
+
+    @/components/Hello:中的@是 resoleve("src")别名
 
 
 
